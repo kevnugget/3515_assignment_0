@@ -1,4 +1,4 @@
-class Circle : Shape("Circle") {
+class Circle(_name : String = "Circle") : Shape(_name) {
 	private var radius: Int = 0
 
 	fun setDimensions(radius : Int) {
