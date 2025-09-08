@@ -16,7 +16,7 @@ open class Triangle(_name : String = "Triangle") : Shape(_name) {
     }
 
     override fun getArea() : Double {
-        val sides = 0.5 * (a + b + c)
+        val sides = (a + b + c).toDouble() * 0.5
         return sqrt(sides * (sides- a) * (sides- b) * (sides - c))
     }
 
