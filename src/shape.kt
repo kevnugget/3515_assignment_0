@@ -1,6 +1,7 @@
-abstract class Shape (_name : String) : Dimensionable {
-    var name = _name
+abstract class Shape (name1 : String) : Dimensionable {
+    val name = name1
 
-    abstract fun getArea() : Double
-
+    open fun getArea() : Double {
+        return 0.0
+    }
 }
