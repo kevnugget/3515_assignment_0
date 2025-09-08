@@ -17,7 +17,12 @@ open class Triangle(_name : String = "Triangle") : Shape(_name) {
 
     override fun getArea() : Double {
         val sides = (a + b + c).toDouble() * 0.5
-        return sqrt(sides * (sides- a) * (sides- b) * (sides - c))
+        if ((a + b > c) && (a + c > b) && (b + c > a)) { // valid triangle
+            return sqrt(sides * (sides- a) * (sides- b) * (sides - c))
+        }
+        else {
+            throw IllegalArgumentException("Invalid triangle: sides do not satisfy triangle inequalities.")
+        }
     }
 
 
